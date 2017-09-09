@@ -26,3 +26,26 @@ void insertar(Lista* l, Nodo* n) {
     l->tamano++;
 }
 
+int eliminar(Lista* l, int valor){
+    Nodo* anterior = NULL;
+    Nodo* actual = l->first;
+    while(actual != NULL){
+        if(actual->dato == valor){
+            if(anterior == NULL){
+                l->first = actual->next;
+                if(actual->next == NULL){
+                    l->end = NULL;
+                }
+            }else {
+                enlazar(anterior, actual->next);
+                if(anterior->next == NULL){
+                    l->end = anterior;
+                }
+            }
+            free(actual);
+            return 1;
+        }
+    anterior = actual;
+    }
+    return 0;
+}
