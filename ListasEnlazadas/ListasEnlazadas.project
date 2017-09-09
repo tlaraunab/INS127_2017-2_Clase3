@@ -94,5 +94,7 @@
   </Settings>
   <VirtualDirectory Name="src">
     <File Name="main.c"/>
+    <File Name="Nodo.h"/>
+    <File Name="Lista.h"/>
   </VirtualDirectory>
 </CodeLite_Project>
