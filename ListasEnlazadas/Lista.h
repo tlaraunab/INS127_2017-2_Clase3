@@ -46,6 +46,7 @@ int eliminar(Lista* l, int valor){
             return 1;
         }
     anterior = actual;
+        actual = actual->next;
     }
     return 0;
 }
